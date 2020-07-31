@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem,
-    Button, Row, Col, Label } from 'reactstrap';
+    Button, Row, Col, Label,FormGroup } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
 
@@ -161,8 +161,15 @@ class Contact extends Component {
                                      />
                                 </Col>
                             </Row>
-                            
+                            <FormGroup row>
+                                <Col md={{size: 10, offset: 2}}>
+                                    <Button type="submit" color="primary">
+                                        Send Feedback
+                                    </Button>
+                                </Col>
+                            </FormGroup>
                         </LocalForm>
+
                     </div>
                </div>
 
