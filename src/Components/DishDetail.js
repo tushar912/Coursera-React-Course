@@ -1,10 +1,9 @@
 import React,{Component} from 'react';
-import {Control, LocalForm, Errors } from 'react-redux-form'
 import {Card, CardImg, CardBody, CardTitle, CardText, Breadcrumb, BreadcrumbItem, Label
     , Button, Row, Col, Modal, ModalHeader, ModalBody} from 'reactstrap'
     import { Loading } from './Loading';
 import { Link } from 'react-router-dom';
-
+import { Control, Form,LocalForm, Errors, actions } from 'react-redux-form';
 
 const required = (val) => val && val.length
 const maxlength = (len) => (val) => !(val) || (val.length <= len)
