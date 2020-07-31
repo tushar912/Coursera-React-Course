@@ -65,6 +65,7 @@ class SubmitComment extends Component {
 
     handleSubmit(values) {
         this.toggleModal();
+        this.props.addComment(this.props.dish.id,values.rating, values.author, values.message)
             }
     render(){
         return (<div>
@@ -151,7 +152,7 @@ class DishDetail extends Component{
                     <RenderComments comments={this.props.comments} />
                 </div>
             </div>
-            <SubmitComment/>
+            <SubmitComment addComment={this.props.addComment} dish={this.props.dish}/>
             </div>
         );
             
